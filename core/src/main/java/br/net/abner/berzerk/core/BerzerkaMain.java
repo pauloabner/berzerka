@@ -23,7 +23,7 @@ public class BerzerkaMain implements Game {
 	  canvas.fillRect(0, 0, width, height);
 	  ImageLayer bg = graphics().createImageLayer(bgImage);
 	  graphics().rootLayer().add(bg);
-
+	  
 	  //create and add player
 	  Image playerImage = assets().getImage("images/player.png");
 	  ImageLayer playerLayer = graphics().createImageLayer(playerImage);
@@ -51,6 +51,22 @@ public class BerzerkaMain implements Game {
 	  }
 	  
 	  graphics().rootLayer().add(enimiesLayer);
+	  
+	  CanvasImage scenarioBorderImage = graphics().createImage(width, height);
+	  Canvas scenarioCanvas = scenarioBorderImage.canvas();
+	  scenarioCanvas.setFillColor(Color.rgb(0, 0, 255));
+	  scenarioCanvas.fillRect(0, 0, width, 10);
+	  scenarioCanvas.fillRect(0, 0, 10, height);
+	  scenarioCanvas.fillRect(width - 10, 0, width, height);
+	  scenarioCanvas.fillRect(0, height -10, width, height);
+	  scenarioCanvas.fillRect(width/4, height/2 - 5 , width/2, 10);
+	  scenarioCanvas.fillRect(width/4 - 10, height/4, 10, height/2);
+	  scenarioCanvas.fillRect(3*width/4 , height/4, 10, height/2);
+	  
+	  ImageLayer scenarioLayer = graphics().createImageLayer(scenarioBorderImage);
+	  graphics().rootLayer().add(scenarioLayer);
+	  
+	  
   }
 
   @Override
