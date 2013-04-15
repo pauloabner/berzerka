@@ -11,10 +11,10 @@
 
   <artifactId>berzerk-flash</artifactId>
   <packaging>war</packaging>
-  <name>BerzerkaMain Flash</name>
+  <name>BerzerkMain Flash</name>
 
   <properties>
-    <gwt.module>br.net.abner.berzerk.BerzerkaMainFlash</gwt.module>
+    <gwt.module>br.net.abner.berzerk.BerzerkMainFlash</gwt.module>
     <gwt.name>berzerkflash</gwt.name>
     <flexsdk.dir>${project.build.directory}/flex4sdk</flexsdk.dir>
   </properties>
@@ -23,6 +23,19 @@
     <dependency>
       <groupId>br.net.abner.berzerk</groupId>
       <artifactId>berzerk-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>br.net.abner.berzerk</groupId>
+      <artifactId>berzerk-core</artifactId>
+      <version>${project.version}</version>
+      <classifier>sources</classifier>
+    </dependency>
+
+    <dependency>
+      <groupId>br.net.abner.berzerk</groupId>
+      <artifactId>berzerk-assets</artifactId>
       <version>${project.version}</version>
     </dependency>
 

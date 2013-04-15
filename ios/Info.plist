@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>BerzerkaMain</string>
+	<string>BerzerkMain</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>touch-icon-57x57.png</string>

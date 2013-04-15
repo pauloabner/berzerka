@@ -11,10 +11,10 @@
 
   <artifactId>berzerk-html</artifactId>
   <packaging>war</packaging>
-  <name>BerzerkaMain HTML</name>
+  <name>BerzerkMain HTML</name>
 
   <properties>
-    <gwt.module>br.net.abner.berzerk.BerzerkaMain</gwt.module>
+    <gwt.module>br.net.abner.berzerk.BerzerkMain</gwt.module>
     <gwt.name>berzerk</gwt.name>
     <!-- Desired Google App Engine SDK version -->
     <gae.version>1.6.1</gae.version>
@@ -28,9 +28,29 @@
     </dependency>
 
     <dependency>
+      <groupId>br.net.abner.berzerk</groupId>
+      <artifactId>berzerk-core</artifactId>
+      <version>${project.version}</version>
+      <classifier>sources</classifier>
+    </dependency>
+
+    <dependency>
+      <groupId>br.net.abner.berzerk</groupId>
+      <artifactId>berzerk-assets</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>com.googlecode.playn</groupId>
       <artifactId>playn-html</artifactId>
       <version>${playn.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.googlecode.playn</groupId>
+      <artifactId>playn-html</artifactId>
+      <version>${playn.version}</version>
+      <classifier>sources</classifier>
     </dependency>
 
     <!-- Start Google App Engine dependencies -->

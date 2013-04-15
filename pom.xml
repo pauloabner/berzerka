@@ -4,17 +4,17 @@
   <parent>
     <groupId>com.googlecode.playn</groupId>
     <artifactId>playn-project</artifactId>
-    <version>1.5.1</version>
+    <version>1.6</version>
   </parent>
 
   <groupId>br.net.abner.berzerk</groupId>
   <artifactId>berzerk</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>BerzerkaMain Metaproject</name>
+  <name>BerzerkMain Metaproject</name>
 
   <properties>
-    <playn.version>1.5.1</playn.version>
+    <playn.version>1.6</playn.version>
   </properties>
 
   <profiles>
@@ -40,8 +40,8 @@
       <modules><module>flash</module></modules>
     </profile>
   </profiles>
-
   <modules>
+    <module>assets</module>
     <module>core</module>
   </modules>
 </project>

@@ -11,16 +11,22 @@
 
   <artifactId>berzerk-java</artifactId>
   <packaging>jar</packaging>
-  <name>BerzerkaMain Java</name>
+  <name>BerzerkMain Java</name>
 
   <properties>
-    <mainClass>br.net.abner.berzerk.java.BerzerkaMainJava</mainClass>
+    <mainClass>br.net.abner.berzerk.java.BerzerkMainJava</mainClass>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>br.net.abner.berzerk</groupId>
       <artifactId>berzerk-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>br.net.abner.berzerk</groupId>
+      <artifactId>berzerk-assets</artifactId>
       <version>${project.version}</version>
     </dependency>
 

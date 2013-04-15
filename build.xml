@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project name="berzerk" default="run-java" xmlns:artifact="urn:maven-artifact-ant">
   <!-- Define your project information here -->
-  <property name="java.classname" value="br.net.abner.berzerk.java.BerzerkaMainJava"/>
-  <property name="html.classname" value="br.net.abner.berzerk.BerzerkaMain"/>
-  <property name="html.index" value="BerzerkaMain.html"/>
+  <property name="java.classname" value="br.net.abner.berzerk.java.BerzerkMainJava"/>
+  <property name="html.classname" value="br.net.abner.berzerk.BerzerkMain"/>
+  <property name="html.index" value="BerzerkMain.html"/>
 
   <!-- Everything below here shouldn't need to be modified -->
   <!-- run 'ant -p' to see available targets -->

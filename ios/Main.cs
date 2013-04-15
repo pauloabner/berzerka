@@ -12,9 +12,8 @@ namespace br.net.abner.berzerk
   public partial class AppDelegate : IOSApplicationDelegate {
     public override bool FinishedLaunching (UIApplication app, NSDictionary options) {
       app.SetStatusBarHidden(true, true);
-      var pf = IOSPlatform.register(app, IOSPlatform.SupportedOrients.PORTRAITS);
-      pf.assets().setPathPrefix("assets");
-      PlayN.run(new BerzerkaMain());
+      IOSPlatform.register(app, IOSPlatform.SupportedOrients.PORTRAITS);
+      PlayN.run(new BerzerkMain());
       return true;
     }
   }

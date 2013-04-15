@@ -64,8 +64,8 @@ public class BerzerkaMain implements Game {
 	  scenarioCanvas.fillRect(3*width/4 , height/4, 10, height/2);
 	  
 	  ImageLayer scenarioLayer = graphics().createImageLayer(scenarioBorderImage);
-	  graphics().rootLayer().add(scenarioLayer);
-	  
+	  graphics().rootLayer().add(scenarioLayer);  
+	 
 	  
   }
 
