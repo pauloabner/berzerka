@@ -1,7 +1,8 @@
 package br.net.abner.berzerk.core;
 
-import static playn.core.PlayN.*;
-
+import static playn.core.PlayN.assets;
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.random;
 import playn.core.Canvas;
 import playn.core.CanvasImage;
 import playn.core.Color;
@@ -9,10 +10,15 @@ import playn.core.Game;
 import playn.core.GroupLayer;
 import playn.core.Image;
 import playn.core.ImageLayer;
+import playn.core.Keyboard;
+import playn.core.Keyboard.Event;
+import playn.core.PlayN;
 
 public class BerzerkMain extends Game.Default {
 
   private float physUnitPerScreenUnit = 1f;
+private ImageLayer playerLayer;
+private float dx = 1f;
 
 public BerzerkMain() {
     super(33); // call update every 33ms (30 times per second)
@@ -32,7 +38,7 @@ public BerzerkMain() {
 
       //create and add player
       Image playerImage = assets().getImage("images/player.png");
-      ImageLayer playerLayer = graphics().createImageLayer(playerImage);
+      playerLayer = graphics().createImageLayer(playerImage);
       playerLayer.setTranslation(width/8 - 12, height/2 - 20);
       graphics().rootLayer().add(playerLayer);
       
@@ -70,15 +76,36 @@ public BerzerkMain() {
       scenarioCanvas.fillRect(3*width/4 , height/4, 10, height/2);
       
       ImageLayer scenarioLayer = graphics().createImageLayer(scenarioBorderImage);
-      graphics().rootLayer().add(scenarioLayer);
+      graphics().rootLayer().add(scenarioLayer); 
+      
+      PlayN.keyboard().setListener(new Keyboard.Adapter(){
+
+		@Override
+		public void onKeyDown(Event event) {
+			// TODO Auto-generated method stub
+			super.onKeyDown(event);
+		}
+
+		@Override
+		public void onKeyUp(Event event) {
+			// TODO Auto-generated method stub
+			super.onKeyUp(event);
+		}
+    	  
+      });
+      
   }
 
   @Override
-  public void update(int delta) {
+  public void update(int delta) {	  
+	  playerLayer.setTx(playerLayer.tx() + dx );
+	  playerLayer.setTy(playerLayer.ty() + dx );
   }
 
   @Override
   public void paint(float alpha) {
     // the background automatically paints itself, so no need to do anything here!
   }
+  
+  
 }
