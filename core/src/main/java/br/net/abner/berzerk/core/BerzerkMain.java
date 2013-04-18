@@ -18,7 +18,8 @@ public class BerzerkMain extends Game.Default {
 
   private float physUnitPerScreenUnit = 1f;
 private ImageLayer playerLayer;
-private float dx = 1f;
+private float dx = 0f;
+private float dy = 0f;
 
 public BerzerkMain() {
     super(33); // call update every 33ms (30 times per second)
@@ -81,15 +82,23 @@ public BerzerkMain() {
       PlayN.keyboard().setListener(new Keyboard.Adapter(){
 
 		@Override
-		public void onKeyDown(Event event) {
-			// TODO Auto-generated method stub
+		public void onKeyDown(Keyboard.Event event) {			
 			super.onKeyDown(event);
+			if(event.key().toString().equals("RIGHT"))
+				dx = 1;
+			if(event.key().toString().equals("LEFT"))
+				dx = -1;
+			if(event.key().toString().equals("UP"))
+				dy = -1;
+			if(event.key().toString().equals("DOWN"))
+				dy = 1;
 		}
 
 		@Override
-		public void onKeyUp(Event event) {
-			// TODO Auto-generated method stub
+		public void onKeyUp(Event event) {			
 			super.onKeyUp(event);
+			dx = 0;
+			dy = 0;
 		}
     	  
       });
@@ -99,7 +108,7 @@ public BerzerkMain() {
   @Override
   public void update(int delta) {	  
 	  playerLayer.setTx(playerLayer.tx() + dx );
-	  playerLayer.setTy(playerLayer.ty() + dx );
+	  playerLayer.setTy(playerLayer.ty() + dy );
   }
 
   @Override
